@@ -19,8 +19,9 @@ body {
 .grid {
     display: grid;
     grid-template-columns: repeat(3, 150px); /* Adjust size as needed */
+    grid-template-rows: repeat(3, 150px); /* Adjust size as needed */
     grid-gap: 3cm; /* 3 cm space between images */
-    position: absolute;
+    position: relative;
 }
 
 .grid-item {
@@ -34,16 +35,21 @@ body {
     border-radius: 8px; /* Optional: rounded corners */
 }
 
-.grid-item .label {
+.label {
     margin-top: 5px; /* Space between image and label */
     font-size: 14px; /* Adjust font size as needed */
     color: white; /* Adjust text color as needed */
 }
 
-/* Special styling for the first image to center it alone */
-.grid-item:first-child {
-    grid-column: 2 / 3; /* Center the first image in the middle of the grid */
-    grid-row: 2 / 3; /* Center it in the middle row */
+/* Special styling for the first image to stand alone in the center */
+.grid-item.single {
+    grid-column: 2 / 3; /* Center in the middle column */
+    grid-row: 2 / 3; /* Center in the middle row */
     grid-column: span 3; /* Make it span across the grid */
     grid-row: span 3; /* Make it span across the grid */
+}
+
+/* Adjust positioning of other images to fit around the central image */
+.grid-item:not(.single) {
+    position: relative;
 }
