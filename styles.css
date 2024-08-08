@@ -5,7 +5,7 @@ body {
     background-size: cover;
     background-position: center;
     font-family: Arial, sans-serif;
-    background-color: rgba(0, 0, 0, 0.5); /* Dim the background */
+    background-color: rgba(0.9, 0.9, 0.9, 0.9); /* Dim the background */
 }
 
 .container {
@@ -41,12 +41,12 @@ body {
     color: white; /* Adjust text color as needed */
 }
 
-/* Special styling for the first image to stand alone in the center */
-.grid-item.single {
-    grid-column: 2 / 3; /* Center in the middle column */
-    grid-row: 2 / 3; /* Center in the middle row */
-    grid-column: span 3; /* Make it span across the grid */
-    grid-row: span 3; /* Make it span across the grid */
+/* Special styling for the first image to stand alone in the center 
+.grid-item.single {*/
+   /*  grid-column: 2 / 3; /* Center in the middle column */
+/* grid-row: 2 / 3; /* Center in the middle row */
+   /*  grid-column: span 3; /* Make it span across the grid */
+   /*  grid-row: span 3; /* Make it span across the grid */
 }
 
 /* Adjust positioning of other images to fit around the central image */
